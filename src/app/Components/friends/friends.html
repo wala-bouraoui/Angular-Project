@@ -1,0 +1,14 @@
+<div>
+    @for (item of friendsList; track item) {
+        <input type="text" [(ngModel)]="item.name" />
+        
+    }
+</div>
+<ul>
+        @for (item of friendsList; track item) {
+            <li>{{ item.name }}</li>
+        
+    }
+</ul>
+
+    
