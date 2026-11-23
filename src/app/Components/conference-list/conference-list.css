@@ -1,0 +1,80 @@
+.conferences {
+  border-left-color: #0f8b8d;
+}
+.icon {
+  background: #e0fbfb;
+}
+h2 {
+  margin: 0;
+  color: #1a3a63;
+  font-size: 1.7rem;
+}
+.subtitle {
+  margin: 6px 0 18px;
+  color: #6b7280;
+}
+.search {
+  width: 100%;
+  max-width: 540px;
+  box-sizing: border-box;
+  padding: 16px 20px;
+  margin-bottom: 14px;
+  font-size: 1rem;
+  border: 2px solid #dde3ec;
+  border-radius: 12px;
+  outline: none;
+}
+.search:focus {
+  border-color: #2563eb;
+}
+.message {
+  padding: 16px;
+  border-radius: 10px;
+  background: #fff7e6;
+  color: #92400e;
+  font-weight: bold;
+}
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+  gap: 20px;
+}
+.conf-card {
+  padding: 8px 24px 24px;
+  border: 1px solid #e2e8f0;
+  border-radius: 14px;
+  background: #f8fafc;
+  cursor: pointer;
+  transition: box-shadow 0.15s, border-color 0.15s;
+}
+.conf-card:hover,
+.conf-card.selected {
+  border-color: #2563eb;
+  box-shadow: 0 4px 14px rgba(37, 99, 235, 0.18);
+}
+.conf-card h3 {
+  color: #1a3a63;
+  font-size: 1.15rem;
+}
+.btn {
+  padding: 12px 20px;
+  border: none;
+  border-radius: 10px;
+  color: #fff;
+  font-weight: bold;
+  font-size: 0.95rem;
+  cursor: pointer;
+}
+.btn-green {
+  background: #15803d;
+}
+.btn-orange {
+  background: #d97706;
+}
+.btn-red {
+  background: #c62828;
+}
+.btn:disabled {
+  cursor: not-allowed;
+  opacity: 0.85;
+}

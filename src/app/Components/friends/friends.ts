@@ -9,9 +9,8 @@ import { FormsModule } from '@angular/forms';
 })
 export class Friends {
   friendsList = [
-    { name: 'Sami', email: 'sami@example.com' },
-    { name: 'Sara', email: 'sara@example.com' },
-    { name: 'Ahmed', email: 'ahmed@example.com' }
-  ]
-
+    { id: 1, name: 'Sami', email: 'sami@example.com' },
+    { id: 2, name: 'Sarra', email: 'sarra@example.com' },
+    { id: 3, name: 'Amine', email: 'amine@example.com' },
+  ];
 }

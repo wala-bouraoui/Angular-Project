@@ -1,15 +1,17 @@
-<h3> Zone de notifiactions</h3>
-<p>
-    vous avez {{notifList.length}} notifications.
-</p>
-<button (click)="showNotifications()">{{ btnText }}</button>
-@if (show){
-<div>
-    <ul>
-        @for (item of notifList; track $index) {
-            <li>
-                {{ item.message }}</li>
+<section class="card notifications" id="notifications">
+  <div class="icon">🔔</div>
+  <div class="content">
+    <h2>Zone de notifications</h2>
+    <p>Vous avez {{ notifList.length }} nouvelles notifications.</p>
+    <button type="button" (click)="toggleNotifications()">
+      {{ show ? 'Masquer les notifications' : 'Afficher les notifications' }}
+    </button>
+    @if (show) {
+      <ul>
+        @for (item of notifList; track item.id) {
+          <li>{{ item.message }}</li>
         }
-    </ul>
-</div>
-}
+      </ul>
+    }
+  </div>
+</section>

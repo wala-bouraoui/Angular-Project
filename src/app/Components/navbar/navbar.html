@@ -1,5 +1,10 @@
 <nav class="navbar">
-  @for (item of list; track item) {
-    <a href="#">{{ item }}</a>
+  @for (item of list; track item.label) {
+    <a
+      href="#"
+      [class.active]="active() === item.label"
+      (click)="select(item, $event)"
+      >{{ item.label }}</a
+    >
   }
 </nav>

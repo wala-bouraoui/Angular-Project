@@ -8,15 +8,13 @@ import { Component } from '@angular/core';
 })
 export class Notifications {
   notifList = [
-    {id: 1, message: "You have a new message"},
-    {id: 2, message: "Your profile has been updated" },
-    {id: 3, message: "You have a new frined request" },
-  ]
+    { id: 1, message: 'Vous avez reçu un nouveau message' },
+    { id: 2, message: 'Votre profil a été mis à jour' },
+  ];
 
-  show= false;
-  btnText ="show Notifications"
-  showNotifications() {
-    this.show =!this.show;
-    this.btnText = this.show ? "Hide Notifiactions" : "Show Notifiactions";
+  show = false;
+
+  toggleNotifications(): void {
+    this.show = !this.show;
   }
 }

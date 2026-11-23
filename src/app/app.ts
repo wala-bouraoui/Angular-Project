@@ -1,18 +1,17 @@
-import { Component, signal } from '@angular/core';
+import { Component } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
 import { Header } from './Components/header/header';
 import { Navbar } from './Components/navbar/navbar';
-import { Friends } from './Components/friends/friends';
-import { Footer } from './Components/footer/footer';
-import { Notifications } from './Components/notifications/notifications';
 import { Profil } from './Components/profil/profil';
+import { ConferenceList } from './Components/conference-list/conference-list';
+import { Friends } from './Components/friends/friends';
+import { Notifications } from './Components/notifications/notifications';
+import { Footer } from './Components/footer/footer';
 
 @Component({
   selector: 'app-root',
-  imports: [RouterOutlet,Header,Navbar,Friends,Footer,Profil,Notifications],
+  imports: [RouterOutlet, Header, Navbar, Profil, ConferenceList, Friends, Notifications, Footer],
   templateUrl: './app.html',
-  styleUrl: './app.css'
+  styleUrl: './app.css',
 })
-export class App {
-  protected readonly title = signal('projectName');
-}
+export class App {}

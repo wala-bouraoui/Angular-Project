@@ -1,0 +1,20 @@
+<section class="card details" id="details">
+  <div class="icon">🎤</div>
+  <div class="content">
+    <h2>Détail de la conférence</h2>
+
+    @if (conference(); as c) {
+      <p class="badge">Conférence sélectionnée depuis la liste.</p>
+      <p><strong>Titre :</strong> {{ c.title }}</p>
+      <p><strong>Description :</strong> {{ c.description }}</p>
+      <p><strong>Lieu :</strong> {{ c.place }}</p>
+      <p><strong>Date :</strong> {{ c.date | date: 'yyyy-MM-dd' }}</p>
+      <p><strong>Places disponibles :</strong> {{ remaining(c) }}</p>
+      <button type="button" [disabled]="remaining(c) === 0" (click)="register(c)">
+        S’inscrire
+      </button>
+    } @else {
+      <p class="empty">Aucune conférence sélectionnée. Cliquez sur une conférence dans la liste.</p>
+    }
+  </div>
+</section>

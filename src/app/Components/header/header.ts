@@ -1,6 +1,5 @@
 import { Component, signal } from '@angular/core';
 
-
 @Component({
   selector: 'app-header',
   imports: [],
@@ -8,6 +7,6 @@ import { Component, signal } from '@angular/core';
   styleUrl: './header.css',
 })
 export class Header {
-  title = signal('Conferencia App');
-  msg = signal('Welcome to your user dashboard!');
+  title = signal('Conference App');
+  msg = signal('Bienvenue sur votre espace utilisateur');
 }

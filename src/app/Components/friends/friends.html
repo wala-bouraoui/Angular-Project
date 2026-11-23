@@ -1,14 +1,16 @@
-<div>
-    @for (item of friendsList; track item) {
+<section class="card friends" id="amis">
+  <div class="icon">👥</div>
+  <div class="content">
+    <h2>Liste des amis</h2>
+    <div class="inputs">
+      @for (item of friendsList; track item.id) {
         <input type="text" [(ngModel)]="item.name" />
-        
-    }
-</div>
-<ul>
-        @for (item of friendsList; track item) {
-            <li>{{ item.name }}</li>
-        
-    }
-</ul>
-
-    
+      }
+    </div>
+    <ul>
+      @for (item of friendsList; track item.id) {
+        <li>{{ item.name }}</li>
+      }
+    </ul>
+  </div>
+</section>
